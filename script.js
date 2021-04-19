@@ -19,21 +19,23 @@ function dragStart() {
 }
 
 function dragEnd() {
-    
+    this.className = 'fill'
 }
 
-function drugOver() {
-    
+function dragOver(e) {
+   e.preventDefault() 
 }
 
-function drugEnter() {
-    
+function dragEnter(e) {
+    e.preventDefault() 
+    this.className += ' hovered'
 }
 
-function drugLeave() {
-    
+function dragLeave() {
+    this.className = 'empty'
 }
 
-function drugDrop() {
-    
+function dragDrop() {
+    this.className = 'empty'
+    this.append(fill)
 }
